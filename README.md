@@ -2,61 +2,57 @@
 
 # Create and deploy a serverless Python application
 
-iOS Project using Python Cloud Functions 
+This repository has code to create a serverless application using Python and IBM Cloud Functions.
 
 [![](https://img.shields.io/badge/ibmcloud-powered-blue.svg)](https://bluemix.net)
 [![Platform](https://img.shields.io/badge/platform-python-lightgrey.svg?style=flat)](https://console.bluemix.net/docs/runtimes/python/index.html#python_runtime)
 
+## Requirements
 
-### Table of Contents
-* [Summary](#summary)
-* [Requirements](#requirements)
-* [Configuration](#configuration)
-* [Run](#run)
-* [Services](#services)
-* [Cloud Functions Apis](#cloud-functions-apis)
-* [License](#license)
-
-### Summary
-iOS Project using Python Cloud Functions 
-
-### Requirements
 - [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/download_cli.html)
-
 - Cloud Functions Plugin:
 
-      bx plugin install Cloud-Functions -r Bluemix
-            
-- Whisk Deploy CLI [Download](https://github.com/apache/incubator-openwhisk-wskdeploy/releases)
-### Configuration
-The .bluemix directory contains all of the configuration files that the toolchain requires to function. At a minimum, the .bluemix directory must contain the following files:
+  ```bash
+  bx plugin install Cloud-Functions -r Bluemix
+  ```
+- [Whisk Deploy CLI](https://github.com/apache/incubator-openwhisk-wskdeploy/releases)
 
-- toolchain.yml
-- deploy.json
-- pipeline.yml
+## Configuration
+
+The `.bluemix` directory contains all of the configuration files that the toolchain requires to function. At a minimum, the `.bluemix` directory must contain the following files:
+
+- `toolchain.yml`
+- `deploy.json`
+- `pipeline.yml`
 
 Detailed information regarding toolchain configuration can be found in our [docs](https://console.bluemix.net/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom).
 
 1. Update the toolchain with your desired changes.
+1. After updating the toolchain files with your desired changes push your application to restage the toolchain
+   ```bash
+   bx app push
+   ```
 
-2. After updating the toolchain files with your desired changes push your application to restage the toolchain
-        bx app push
+## Deployment
 
-### Deployment
 Your application is deployed using the IBM Continuous Delivery pipeline. Your toolchain provides an integrated set of tools to build, deploy, and manage your apps.
 
-#### Managing Cloud Functions and API Connect Manually
+### Managing Cloud Functions and API Connect Manually
 
 1. Download your code locally by navigate to your App dashboard from the [Apple Development Console](https://console.bluemix.net/developer/appledevelopment/apps) or [Web Apps Console](https://console.bluemix.net/developer/appservice/apps) and select `Download Code`.
 
 2. Login into the IBM Cloud
 
-        bx login -a <api> -o <org> -s <space>
+   ```bash
+   bx login -a <api> -o <org> -s <space>
+   ```
 
 3. **Local Deployment:** Execute the deploy script.  If you're on Mac or linux, you can run the `deploy.sh` helper script.
 
-        chmod +x deploy.sh
-        ./deploy.sh
+   ```bash
+   chmod +x deploy.sh
+   ./deploy.sh
+   ```
 
    Or, if you'd rather run the `wskdeploy` command directly, you use the `--param` command line flags to provide values for the `services.cloudant.database` and `services.cloudant.url` values.
 
@@ -71,21 +67,22 @@ Your application is deployed using the IBM Continuous Delivery pipeline. Your to
    Next, go back to your app dashboard and click "View Toolchain", then click on the "Delivery Pipeline".   The delivery pipeline may have executed without any errors, but you need to specify the Cloudant URL before the Cloud Functions actions will operate as expected.  Next, click on the gear icon for the "DEPLOY" phase, then click "Configure Phase" and click "Environment Properties".  Paste the Cloudant url for the "DATABASE_URL" environment variable.  
 
    Next, run your DEPLOY phase again to complete the deployment.
-
         
 4. Review the actions in the IBM Cloud Console [Cloud Functions](https://console.bluemix.net/openwhisk/actions)
- 
-5. Review API for the actions in the IBM Cloud Console [Cloud Functions APIs](https://console.bluemix.net/openwhisk/apimanagement)  
 
+5. Review API for the actions in the IBM Cloud Console [Cloud Functions APIs](https://console.bluemix.net/openwhisk/apimanagement)
 
+## Services
 
-### Services
 This application is configured to connect with the following services:
 
-##### Cloudant
+### Cloudant
+
 Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models.
-  ### Cloud Function Apis
-##### Cloudant Actions
+
+### Cloud Function APIs
+
+#### Cloudant Actions
 
 <table>
   <thead>
@@ -132,6 +129,7 @@ Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that'
     </tr>
   </tbody>
 </table>
-  ### License
-This package contains code licensed under the Apache License, Version 2.0 (the "License"). You may obtain a copy of the License [here](http://www.apache.org/licenses/LICENSE-2.0) and may also view the License in the LICENSE file within this package.
 
+## License
+
+This package contains code licensed under the Apache License, Version 2.0 (the "License"). You may obtain a copy of the License [here](http://www.apache.org/licenses/LICENSE-2.0) and may also view the License in the LICENSE file within this package.
