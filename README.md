@@ -64,10 +64,10 @@ Your application is deployed using the IBM Continuous Delivery pipeline. Your to
 
    First click on the "Cloudant" service link when viewing the app dashboard.  Then click on "Service Credentials", and then click on the "View Credentials" link for your Cloudant instance.  Copy the "url" value for use in the delivery pipeline.
 
-   Next, go back to your app dashboard and click "View Toolchain", then click on the "Delivery Pipeline".   The delivery pipeline may have executed without any errors, but you need to specify the Cloudant URL before the Cloud Functions actions will operate as expected.  Next, click on the gear icon for the "DEPLOY" phase, then click "Configure Phase" and click "Environment Properties".  Paste the Cloudant url for the "DATABASE_URL" environment variable.  
+   Next, go back to your app dashboard and click "View Toolchain", then click on the "Delivery Pipeline".   The delivery pipeline may have executed without any errors, but you need to specify the Cloudant URL before the Cloud Functions actions will operate as expected.  Next, click on the gear icon for the "DEPLOY" phase, then click "Configure Phase" and click "Environment Properties".  Paste the Cloudant url for the "DATABASE_URL" environment variable.
 
    Next, run your DEPLOY phase again to complete the deployment.
-        
+
 4. Review the actions in the IBM Cloud Console [Cloud Functions](https://console.bluemix.net/openwhisk/actions)
 
 5. Review API for the actions in the IBM Cloud Console [Cloud Functions APIs](https://console.bluemix.net/openwhisk/apimanagement)
