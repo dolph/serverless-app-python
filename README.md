@@ -1,6 +1,7 @@
 ![Cloud Functions](https://developer.ibm.com/code/wp-content/uploads/sites/118/2017/10/IBM-CLOUD-FUNCTIONS-35.png)
 
-## serverlessapppython
+# Create and deploy a serverless Python application
+
 iOS Project using Python Cloud Functions 
 
 [![](https://img.shields.io/badge/ibmcloud-powered-blue.svg)](https://bluemix.net)
