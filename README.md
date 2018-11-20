@@ -7,10 +7,10 @@ This repository has code to create a serverless application using Python and IBM
 
 ## Requirements
 
-- [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/download_cli.html)
+- [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html)
 - Cloud Functions Plugin:
   ```bash
-  bx plugin install Cloud-Functions -r Bluemix
+  ibmcloud plugin install Cloud-Functions -r IBM Cloud
   ```
 - [Whisk Deploy CLI](https://github.com/apache/incubator-openwhisk-wskdeploy/releases)
 
@@ -27,7 +27,7 @@ Detailed information regarding toolchain configuration can be found in our [docs
 1. Update the toolchain with your desired changes.
 1. After updating the toolchain files with your desired changes push your application to restage the toolchain
    ```bash
-   bx app push
+   ibmcloud app push
    ```
 
 ## Deployment
@@ -40,7 +40,7 @@ Your application is deployed using the IBM Continuous Delivery pipeline. Your to
 2. Login into the IBM Cloud
 
    ```bash
-   bx login -a <api> -o <org> -s <space>
+   ibmcloud login -a <api> -o <org> -s <space>
    ```
 3. **Local Deployment:** Execute the deploy script.  If you're on Mac or linux, you can run the `deploy.sh` helper script.
 
