@@ -37,13 +37,11 @@ Your application is deployed using the IBM Continuous Delivery pipeline. Your to
 ### Managing Cloud Functions and API Connect Manually
 
 1. Download your code locally by navigate to your App dashboard from the [Apple Development Console](https://console.bluemix.net/developer/appledevelopment/apps) or [Web Apps Console](https://console.bluemix.net/developer/appservice/apps) and select `Download Code`.
-
 2. Login into the IBM Cloud
 
    ```bash
    bx login -a <api> -o <org> -s <space>
    ```
-
 3. **Local Deployment:** Execute the deploy script.  If you're on Mac or linux, you can run the `deploy.sh` helper script.
 
    ```bash
@@ -66,7 +64,6 @@ Your application is deployed using the IBM Continuous Delivery pipeline. Your to
    Next, run your DEPLOY phase again to complete the deployment.
 
 4. Review the actions in the IBM Cloud Console [Cloud Functions](https://console.bluemix.net/openwhisk/actions)
-
 5. Review API for the actions in the IBM Cloud Console [Cloud Functions APIs](https://console.bluemix.net/openwhisk/apimanagement)
 
 ## Services
