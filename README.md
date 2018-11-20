@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/ibmcloud-powered-blue.svg)](https://bluemix.net)
+[![](https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg)](https://bluemix.net)
 [![Platform](https://img.shields.io/badge/platform-python-lightgrey.svg?style=flat)](https://console.bluemix.net/docs/runtimes/python/index.html#python_runtime)
 
 # Create and deploy a serverless Python application
