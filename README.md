@@ -30,7 +30,7 @@ When you have completed this code pattern, you will understand how to:
 
 ## Steps
 
-> As an alternative to the steps below, you can [create this project as a starter kit on IBM Cloud](https://bluemix.net/deploy/button.png)](https://console.bluemix.net/developer/appservice/create-project?starterKit=c4ea37d0-62e0-32e8-bbb1-27e1a742b94c&defaultLanguage=PYTHON&env_id=ibm%3Ayp%3Aus-south&tenantNavMode=true&defaultDeploymentToolchain=), which automatically provisions required services, and injects service credentials into a custom fork of this pattern. Then, you can skip directly to step 4 below.
+> As an alternative to the steps below, you can [create this project as a starter kit on IBM Cloud](https://console.bluemix.net/developer/appservice/create-project?starterKit=c4ea37d0-62e0-32e8-bbb1-27e1a742b94c&defaultLanguage=PYTHON&env_id=ibm%3Ayp%3Aus-south&tenantNavMode=true&defaultDeploymentToolchain=), which automatically provisions required services, and injects service credentials into a custom fork of this pattern. Then, you can skip directly to step 4 below.
 
 1. [Install developer tools](#1-install-developer-tools)
 1. [Configure your DevOps pipeline](#2-configure-your-devops-pipeline)
